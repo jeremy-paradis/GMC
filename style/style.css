@@ -1,0 +1,124 @@
+
+/* Style principal pour index.html */
+/* Palette de couleur : */
+
+root {
+    --primary-color: rgba(3, 145, 178, 1);
+}
+
+/* En-tête */
+header.site-header {
+	background: #0891b2;
+	color: #fff;
+	padding: 24px 0;
+}
+header.site-header .container {
+	padding: 24px 0;
+    margin: 0 auto;
+}
+.site-header .brand {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	font-weight: 700;
+}
+.site-header .brand img { 
+	height: 60px; 
+	width: auto;
+}
+.site-header .brand h1 {
+	font-size: 1.8rem;
+	color: #fff;
+	margin: 0;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+	font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+	background: #f6f8fb;
+	color: #1f2d3d;
+	line-height: 1.5;
+	-webkit-font-smoothing:antialiased;
+}
+
+/* Conteneur central */
+.container {
+	width: 90%;
+	max-width: 1100px;
+	margin: 100px auto 100px auto;
+	padding: 24px 0;
+}
+
+
+
+/* Footer */
+footer.site-footer { 
+    margin-top:36px; 
+    padding:40px 0; 
+    background:#000; 
+    color:#fff; 
+}
+footer.site-footer .container { padding: 40px 0; }
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.footer-col h4 { 
+    font-size: 1rem; 
+    margin-bottom: 16px; 
+    font-weight: 700;
+    color: #fff;
+}
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.footer-brand img { height: 40px; width: auto; }
+.footer-brand h3 { font-size: 1.4rem; font-weight: 700; }
+.footer-subtitle { font-size: 0.85rem; opacity: 0.8; margin-bottom: 12px; }
+.footer-desc { font-size: 0.9rem; opacity: 0.75; line-height: 1.6; }
+footer.site-footer ul {
+    list-style: none;
+}
+footer.site-footer ul li {
+    margin-bottom: 10px;
+}
+footer.site-footer a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+footer.site-footer a:hover { opacity: 1; }
+footer.site-footer p { 
+    font-size: 0.9rem; 
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+footer .small { font-size:0.9rem; opacity:0.9; }
+
+/* Formulaires */
+input[type="text"], input[type="email"], textarea, select {
+	width:100%; padding:10px 12px; border-radius:8px; border:1px solid #d7e0ea; background:#fff;
+}
+label { display:block; margin-bottom:8px; font-weight:600; color:#2b4254; }
+
+/* Responsive */
+@media (max-width:768px) {
+	.hero .row { flex-direction:column; }
+	.site-header nav { display:flex; flex-wrap:wrap; gap:8px; }
+	.footer-content { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* Utilitaires */
+.text-center { text-align:center; }
+.muted { color:#7b8b98; }
+
+/* Fin du fichier */

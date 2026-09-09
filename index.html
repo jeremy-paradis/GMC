@@ -7,23 +7,73 @@
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="brand">
-                <img src="./ASSETS/LOGO/logo 1.svg" alt="Logo GMC">
-                <h1>Group Makao Construction</h1>
-            </div>
-        </div>
-    </header>
-
     <section class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <h1>Bienvenue sur GMC</h1>
-                    <p>Notre site web est encore en travaux</p>
+        <img src="./ASSETS/IMG/photo2.jpg" alt="Chantier GMC" class="hero-image">
+        <div class="hero-bar container">
+            <a class="brand" href="./index.html">
+                <img src="./ASSETS/LOGO/logo 1.svg" alt="Logo GMC">
+                Group Makao Construction
+            </a>
+            <nav class="header-nav" aria-label="Navigation principale">
+                <a href="./contact.html">Contact</a>
+                <a href="./galerie.html" class="active" aria-current="page">Galerie</a>
+            </nav>
+        </div>
+    </section>
+
+    <section class="hero-action container">
+        <a href="./contact.html" class="btn btn-primary">Contactez notre équipe</a>
+    </section>
+
+    <section class="section welcome container fade-in">
+        <div class="section-header">
+            <h2>Bienvenue</h2>
+            <div class="section-underline"></div>
+        </div>
+        <p>Filiale de Nebulia Group, GMC (Group Makao Construction) accompagne les projets de construction et d'aménagement à Libreville. Notre mission est de concevoir des infrastructures durables, réalisées avec rigueur, qualité et dans le respect des délais.</p>
+    </section>
+
+    <section class="section presentation fade-in">
+        <div class="container presentation-grid">
+            <div class="presentation-copy">
+                <p>Grâce à une équipe qualifiée et à des équipements performants, GMC intervient sur des chantiers de terrassement, de voirie, de génie civil et de construction. Nous mettons notre expertise au service des entreprises, des collectivités et des particuliers afin de bâtir des ouvrages fiables et adaptés aux besoins de demain.</p>
+            </div>
+            <div class="presentation-images">
+                <div class="presentation-row">
+                    <div class="presentation-image presentation-image--small">
+                        <img src="./ASSETS/IMG/camion.jpg" alt="Engins sur chantier">
+                    </div>
+                    <div class="presentation-image presentation-image--small">
+                        <img src="./ASSETS/IMG/camion2.jpg" alt="Travaux de construction">
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="section contact-section" id="contact">
+        <div class="container contact-intro fade-in">
+            <div class="section-header">
+                <h2>Contact</h2>
+                <div class="section-underline"></div>
+            </div>
+            <p class="contact-text">Vous avez un projet de construction ou d'aménagement ? Notre équipe est à votre écoute pour vous accompagner de l'étude jusqu'à la réalisation. Contactez-nous pour obtenir un devis ou échanger sur votre projet. Nous proposons une assistance personnalisée, des solutions techniques adaptées et un suivi qualité régulier.</p>
+        </div>
+        <div class="container contact-cards fade-in">
+            <article class="contact-card contact-card--highlight">
+                <h3>Études & conseils</h3>
+                <p>Analyse de votre projet, recommandations techniques et planification pour garantir un ouvrage solide et durable.</p>
+            </article>
+            <article class="contact-card contact-card--highlight">
+                <h3>Devis personnalisé</h3>
+                <p>Évaluation claire et détaillée pour maîtriser votre budget et suivre votre chantier sans surprise.</p>
+            </article>
+            <article class="contact-card contact-card--highlight">
+                <h3>Suivi de chantier</h3>
+                <p>Accompagnement sur site, respect des délais et contrôle qualité à chaque étape de la réalisation.</p>
+            </article>
+        </div>
+        <div class="container contact-cta fade-in">
+            <a href="./contact.html" class="btn btn-secondary">Contactez notre équipe</a>
         </div>
     </section>
 
@@ -32,26 +82,46 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <div class="footer-brand">
-                        <img src="./ASSETS/LOGO/logo 2.svg" alt="Logo GMC">
+                        <a href="./index.html">
+                            <img src="./ASSETS/LOGO/logo 2.svg" alt="Logo GMC">
+                        </a>
+                        <div>
+                            <h3>GMC</h3>
+                            <p class="footer-subtitle">Group Makao Construction</p>
+                        </div>
                     </div>
                     <p class="footer-desc">Filiale de Nebulia Group<br>GMC a pour objectif de bâtir un avenir meilleur à Libreville.</p>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Liens rapides</h4>
+                    <h4>Liens utiles</h4>
                     <ul>
-                        <li><a href="#acceuil">Acceuil</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./galerie.html">Galerie</a></li>
+                        <li><a href="./mentions-legales.html">Mentions légales</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <p><strong>Email :</strong> <a href="mailto:info@groupmakao.com">info@groupmakao.com</a></p>
-                    <p><strong>Tél :</strong> <a href="tel:"></a></p>
                     <p><strong>Localisation :</strong><br>Libreville, Gabon</p>
                 </div>
             </div>
+            <p class="small">© 2026 Group Makao Construction. Tous droits réservés.</p>
         </div>
     </footer>
+    <script>
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            const updateHero = () => {
+                const scrollY = window.scrollY;
+                const offset = Math.min(0, scrollY * -0.12);
+                hero.style.backgroundPosition = `center calc(50% + ${offset}px)`;
+            };
+            window.addEventListener('scroll', () => requestAnimationFrame(updateHero), { passive: true });
+            updateHero();
+        }
+    </script>
 </body>
 </html>
